@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+box-sizing: border-box;
+margin: 0 ;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+list-style-type: none;
+outline: none;
+}
+
+body{background: url('img/purple.png');}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.container{
+	display: flex;
+	width: 70vw;
+	height: 70vh;
+	background-color: red;
+	margin: 5em auto;
+}
+.blackside{
+	width: 30%;
+	background: #292D32;
+}
+.whiteside{
+	width: 70%;
+	background: #F5F7FA;
+}
+.blackside ul {
+	margin-top: 1.5em;
+}
+.blackside ul li {
+	padding: 5%;
+	margin-left: 10%;
+	
+}
+.blackside ul li a{
+	color: #626C76;
+	font-family: Poppins;
+	font-size: 14px;
+	letter-spacing: 0px;
+	font-family: 'Poppins', sans-serif;
+
+}
+/* .blackside ul li a:active .numbers{
+
+} */
+.numbers{
+	padding: 4px 13px;
+    background: #4D545A;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: white;
+}
+
+.head{
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 20px;
+	background: #E3EAF3;
+	border: 1px solid #d9dadd;
+}
+
+.staff{
+	display: flex;
+    width: 93%;
+    margin:11px auto;
+    padding: 10px;
+    border-radius: 2px;
+background: #F5F7FA;
+}
+.main{
+	background: #E3EAF3;
+	height: 50vh;
+	padding-top: 1em;
+}
+.stafImg img{
+	border-radius: 50%;
+    margin-right: 15px;
+}
+.staffName{
+	color: #292D32;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+}
+.staff div p{
+	color: #828F9A;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+}
+.bottom{
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+}
+.popup{
+	display: none;
+	position: absolute;
+    z-index: 9999;
+    top: 25%;
+    padding: 7px;
+    color: white;
+    left: 41%;
+    border-radius: 2px;
+    background: #F4BE6C;
+}
+.next{
+	padding: 5px 12px;
+	border-radius: 2px;
+	background: #6C70DC;
+	margin-top: 12px;
+	margin-right: 15px;
+	color: white;
+}
+.back{
+	padding: 5px 12px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-left: 15px;
+    color: white;
+border: 1px solid #E3EAF3;
+background: #dadbdc;
+}
+
+.servis{
+	background: #E3EAF3;
+	height: 50vh;
+	padding-top: 1em;
+}
+.servisX{
+	display: flex;
+    width: 93%;
+    margin:11px auto;
+    padding: 10px;
+    border-radius: 2px;
+background: #F5F7FA;
+}
+.servisXImg img{
+	border-radius: 50%;
+    margin-right: 15px;
+}
+.servisXName{
+	color: #292D32;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+}
+.servisX div p{
+	color: #828F9A;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+}
+.price{
+color: #4FBF65;
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.Sflex{
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.SelectTime{
+	background: #E3EAF3;
+	height: 50vh;
+	padding-top: 1em;
+	display: flex;
+	justify-content: space-around;
+}
+.date{
+	position: relative;
+	z-index: 0;
+	width: 55%;
+	text-align: center;
+}
+
+.rightSpan{
+	position: absolute;
+    top: -1.5%;
+    left: 30%;
+    z-index: 999;
+}
+.leftSpan{
+	position: absolute;
+	top: -1.5%;
+	z-index: 999;
+	right: 30%;
+}
+.datatable{
+	width: 95%;
+	margin: 0 auto;
+	padding: 10px 5px;
+	height: 38vh;
+
+	background-color: white;
+}
+.tds{
+	width: 45px;
+	background-color: #e2e4e5;
+color: #AAACAF;
+}
+.month{
+	margin-bottom: 15px;
+}
+.all{
+	display: none;
+}
+.datatable tr th{
+	color: #C8C9CC;
+	padding: 5px;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.2px;
+}
+.time{
+	width: 45%;
+	text-align: center;
+}
+.timehead{
+	width: 88%;
+
+}
+.timehead > h5{
+	margin-bottom: 15px;
+	
+}
+.takeTime{
+	width: 100%;
+	height: 38vh;
+	border-radius: 2px;
+	background: #FFF;
+}
+.takeTime> h5{
+	padding-top:8px ;
+	border-bottom: 0.1px solid #f5f2f2;
+	color: #6C70DC;
+}
+.line{
+	border: 1px solid  #d5d8db;
+	width: 95%;
+	margin: 0 auto;
+}
+.times{
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-between;
+}
+.oclock{
+	padding: 3px 18px;
+	background: #ECEFF2;
+	color: rgb(83, 82, 82);
+	margin: 0 5px;
+}
+.inputs{
+	background: #E3EAF3;
+    height: 50vh;
+    padding: 0.5em 1.5em;
+   
+}
+.together{
+	display: flex;
+	flex-wrap: wrap;
+}
+.first{
+	width: 50%;
+	height: 10vh;
+}
+.second{
+	width: 50%;
+}
+
+.labels{
+color: #292D32;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.textinputs{
+	width: 90%;
+    padding: 7px;
+}
+.note{
+	margin-top: 2em;
+}
+.notes{
+	padding: 16px 19px;
+	background: white;
+}
+.noteSpan{
+color: #6C70DC;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+padding-right: 10px;
+}
+.noteP{
+	color: black;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.cGreen{
+	color: #4FBF65;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+}
+
+
+.mydates {
+	display: none;
+ }
+ .Pgreen{
+	color: green;
+ }
+ .modal{
+	display: none;
+	position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+ }
+ .modalContent{
+	background-color: #fefefe;
+	padding: 30px;
+	border-radius: 4px;
+	border: 1px solid #888;
+	width: 27%;
+	margin: 7em auto;
+ }
+ .close{
+	position: absolute;
+    right: 38%;
+    top: 33%;
+ }
+ .textComp{
+	padding: 30px 0 30px 20px;
+ }
+ .verify{
+	font-size: 14px;
+	display: none;
+	color: green;
+	text-align: center;
+ }
+ .fail{
+	display: none;
+	font-size: 15px;
+	color: #F39C12;
+	text-align: center;
+ }
+#staffID{
+	display: none;
+}
+#servicesID{
+	display: none;
+}
+ 
+/* .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+} 
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}

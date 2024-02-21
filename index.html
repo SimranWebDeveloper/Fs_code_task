@@ -1,0 +1,159 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="blackside">
+			<ul>
+				<li id="myStaff"><span class="numbers">1</span>Staff</li>
+				<li id="myServices"><span class="numbers">2</span>Services</li>
+				<li id="myDateTime"><span class="numbers">3</span> Date & Time</li>
+				<li id="myConfirm"><span class="numbers">4</span>Confirmation</li>
+			</ul>
+		</div>
+		<div class="whiteside">
+			<div class="slideshow-container ">
+					<div class="mySlides fade">
+						<div class="head">
+							<h2>Select Staff</h2>
+							<div><img src="img/cancel.png" alt=""></div>
+						</div>
+						<div class="main"></div>
+						<div class="bottom">
+							<div class="empty"></div>
+							<div class="popup" id="popup1"><img src="img/error.png" alt=""><span> Select Staff</span></div>
+							<div class="next" onclick="plusSlides(1)">Next</div>
+						</div>
+						
+					</div>
+					<div class="mySlides fade">
+						<div class="head">
+							<h2>Select services</h2>
+							<div><img src="img/cancel.png" alt=""></div>
+						</div>
+						<div class="servis">
+							
+						</div>
+						<div class="bottom">
+							<div class="back prev" onclick="plusSlides(-1)">Back</div>
+							<div class="popup" id="popup2"><img src="img/error.png" alt=""><span> Select Service</span></div>
+							<div class="next" onclick="plusSlides(1)">Next</div>
+						</div>
+						<div id="show"></div>
+					</div>
+					<div class="mySlides">
+
+						<div class="head">
+							<h2>Select date & time</h2>
+							<div><img src="img/cancel.png" alt=""></div>
+						</div>
+						<div class="SelectTime">
+							<div class="date">
+								<span class="rightSpan" onclick="add(-1)"><img src="img/Vector (1).png" alt=""></span>
+								<span class="leftSpan" onclick="add(1)"><img src="img/next.png" alt=""></span>
+								<div class="all">
+									<div class="headdate">
+										<div class="month"><h5 id="calendarMonth"></h5></div>
+									 </div>
+									 <div class="tabledate">
+										<table class="datatable" id="calendarTable">
+										    <tr>
+											   <th>Sun</th>
+											   <th>Mon</th>
+											   <th>Tue</th>
+											   <th>Wed</th>
+											   <th>Thu</th>
+											   <th>Fri</th>
+											   <th>Sat</th>
+										    </tr>
+										</table>
+									 </div>
+									 
+								</div>
+							</div>
+							<div class="time">
+								<div class="timehead">
+									<h5>Time</h5>
+									<div class="takeTime">
+										<h5>Select Data</h5>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="back prev" onclick="plusSlides(-1)">Back</div>
+							<div class="popup" id="popup3"><img src="img/error.png" alt="" ><span> Select Date & Time</span></div>
+							<div class="next" onclick="plusSlides(1)">Next</div>
+						</div>
+						
+					</div>
+					<div class="mySlides fade">
+						<div class="head">
+							<h3>Confirm details</h3>
+							<div><img src="img/cancel.png" alt=""></div>
+						</div>
+						<div class="inputs">
+							<div class="together">
+								<div class="first">
+									<label for="name" class="labels">First Name *</label>
+									<p></p>
+									<input type="text" id="name" class="textinputs">
+								</div>
+								<div class="first">
+									<label for="name" class="labels">Last Name *</label>
+									<p></p>
+									<input type="text" id="lastname" class="textinputs">
+								</div>
+								<div class="second">
+									<label for="name" class="labels">Email *</label>
+									<p></p>
+									<input type="email" id="email" class="textinputs">
+								</div>
+								<div class="second">
+									<label for="name" class="labels">Phone</label>
+									<p></p>
+									<input type="text" id="phone" class="textinputs">
+								</div>	
+							</div>
+							<div id="staffID"></div>
+							<div id="servicesID"></div>
+							<div class="note">
+								<p>Note</p>
+								<div class="notes">
+									<p class="noteP"><span class="noteSpan">Staff:</span> <span id="gotName"></span></p>
+									<p class="noteP"><span class="noteSpan">Services:</span><span id="gotServe"></span></p>
+									<p class="noteP"><span class="noteSpan">Date:</span><span id="gotDate"></span> / <span id="gotTime"></span></p>
+									<p class="noteP"><span class="noteSpan">Price:</span><span id="gotPrice" class="Pgreen"></span>  </p>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="bottom">
+							<div class="back prev" onclick="plusSlides(-1)">Back</div>
+							<div class="next" id="confirm">Confirm Booking</div>
+						</div>
+					</div>
+					</div>
+		</div>
+		
+	</div>
+	<div class="modal">
+		<div class="modalContent">
+			<div class="close" ><img src="img/cancel.png" alt=""></div>
+			<div id="textCont" class="textComp">
+				<div class="fail">Please, fill the all required fields!</div>
+				<div class="verify">Confirmation successfully completed!</div>
+			</div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+
+	</body>
+	</html>
